@@ -1,0 +1,233 @@
+{
+  "source": "Quorum Positioning & Naming Initiative - Product Naming Document, signed off by ELT Sept 29, 2026",
+  "master_brand": "Quorum",
+  "tagline": "The AI platform for connected energy operations",
+  "definitions": {
+    "market_classification": "Upstream, Midstream, Energy Transition or Renewables. INTERNAL ONLY: gives context on the customer's business area. Do not use market names as part of a product name or in customer-facing hierarchy claims.",
+    "qnect_home": "Software customers can buy to access related solutions. One per market. Sold in Basic, Premium, and Platinum.",
+    "solution": "A bundle of products. The primary packaged offering the customer is buying.",
+    "product": "Delivers specific functionality. May be purchased as part of a bundled solution or individually.",
+    "legacy_names": "The former name(s) of the product. An empty list means no legacy name was given in the signed-off document.",
+    "shared_solution": "A solution that appears under more than one market."
+  },
+  "platform": {
+    "qnect_ai": {
+      "name": "Qnect AI",
+      "description": "Data & Agentic Platform",
+      "tiers": ["Basic", "Premium", "Platinum"]
+    },
+    "qnect_home": {
+      "name": "Qnect Home",
+      "legacy_names": ["On Demand Home"],
+      "tiers": ["Basic", "Premium", "Platinum"]
+    },
+    "components": [
+      {"name": "Qnect Foundry", "role": "Agentic Runtime", "sku": true, "legacy_names": []},
+      {"name": "Qnect IQ", "role": "Knowledge Base & anthology", "sku": true, "legacy_names": []},
+      {"name": "QCredit", "role": "Quota", "sku": true, "legacy_names": []},
+      {"name": "Orchestrator", "role": "AI pillar", "sku": false, "legacy_names": [], "note": "No SKU"},
+      {"name": "LLM / ML Gateway", "role": "AI pillar", "sku": false, "legacy_names": [], "note": "No SKU"}
+    ],
+    "chat_tiers": {
+      "names": ["QAI Basic", "QAI Premium", "QAI Platinum"],
+      "legacy_names": ["QAI"]
+    }
+  },
+  "markets": [
+    {
+      "name": "Upstream",
+      "qnect_home": "Qnect Home",
+      "solutions": [
+        {
+          "name": "Quorum Asset Planning",
+          "description": "Evaluate, plan, and optimize assets",
+          "shared": false,
+          "products": [
+            {"name": "Quorum Asset Evaluation", "legacy_names": ["ValNav"]},
+            {"name": "Quorum Asset Development", "legacy_names": ["Enersight"]},
+            {"name": "Quorum Asset Simulation", "legacy_names": ["PetroVR"]},
+            {"name": "Quorum Asset Optimization", "legacy_names": ["Previso"]},
+            {"name": "Quorum Asset Portfolio Optimization", "legacy_names": ["Portfolio"]}
+          ]
+        },
+        {
+          "name": "Quorum Corporate Planning",
+          "description": "Consolidate data, value assets, and allocate capital",
+          "shared": false,
+          "products": [
+            {"name": "Quorum Corporate Data Foundations", "legacy_names": ["Planning Space Dataflow"]},
+            {"name": "Quorum Economics", "legacy_names": ["Planning Space Economics"]},
+            {"name": "Quorum FP&A", "legacy_names": ["Planning Space Financials"]},
+            {"name": "Quorum Reserves", "legacy_names": ["Planning Space Reserves"]},
+            {"name": "Quorum Portfolio Optimization", "legacy_names": ["Portfolio"]}
+          ]
+        },
+        {
+          "name": "Quorum Execution Planning",
+          "description": "Authorize, plan, and track the work",
+          "shared": false,
+          "products": [
+            {"name": "Quorum Operational Scheduling", "legacy_names": ["Execute Operational Scheduling"]},
+            {"name": "Quorum Well Delivery", "legacy_names": ["Execute Well Delivery"]},
+            {"name": "Quorum Capital Budgeting", "legacy_names": ["Execute Capital Budgeting"]},
+            {"name": "Quorum AFE", "legacy_names": ["Execute AFE"]}
+          ]
+        },
+        {
+          "name": "Quorum Accounting",
+          "shared": true,
+          "products": [
+            {"name": "Quorum Accounting", "legacy_names": ["OGsys", "UoD Accounting"]},
+            {"name": "Quorum Accounting Enterprise", "legacy_names": ["myQuorum Accounting"]}
+          ]
+        },
+        {
+          "name": "Quorum Field Operations",
+          "shared": true,
+          "products": [
+            {"name": "Quorum Well Ops", "legacy_names": ["WellEz", "UoD Well Ops"]},
+            {"name": "Quorum Production", "legacy_names": ["UoD Production"]},
+            {"name": "Quorum zdSCADA", "legacy_names": ["zdSCADA"]}
+          ]
+        },
+        {
+          "name": "Quorum Measurement",
+          "shared": true,
+          "products": [
+            {"name": "Quorum FLOWCAL", "legacy_names": ["FLOWCAL"]},
+            {"name": "Quorum Field Measurement", "legacy_names": ["TESTit", "PROVEit", "CALCit", "PYCit", "ANALYZEit"]}
+          ]
+        },
+        {
+          "name": "Quorum Land",
+          "shared": true,
+          "products": []
+        },
+        {
+          "name": "Quorum zdSCADA",
+          "shared": true,
+          "products": [],
+          "note": "Shown as its own shared solution box alongside the Quorum zdSCADA product under Field Operations"
+        },
+        {
+          "name": "Quorum Supply Chain",
+          "shared": true,
+          "products": [
+            {"name": "Quorum Supply Chain Orchestration", "legacy_names": ["VOR"]},
+            {"name": "Quorum Personnel Logistics", "legacy_names": ["DaWinci"]},
+            {"name": "Quorum Cargo Logistics", "legacy_names": ["DaWinci"]}
+          ]
+        },
+        {
+          "name": "Quorum Hydrocarbon Management",
+          "shared": false,
+          "products": [
+            {"name": "Quorum Hydrocarbon Production Accounting", "legacy_names": ["Energy Components Production"]},
+            {"name": "Quorum Hydrocarbon Revenue Accounting", "legacy_names": ["Energy Components Revenue"]},
+            {"name": "Quorum Terminal & Plants", "legacy_names": ["Energy Components"]}
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Midstream",
+      "qnect_home": "Qnect Home",
+      "solutions": [
+        {
+          "name": "Quorum Gas Scheduling & Accounting",
+          "shared": false,
+          "products": [
+            {"name": "Quorum Gas Gathering & Processing", "legacy_names": ["TIPS"]},
+            {"name": "Quorum Gas Pipeline", "legacy_names": ["myQuorum Pipeline"]},
+            {"name": "Quorum Gas Marketing", "legacy_names": ["QGM"]}
+          ]
+        },
+        {
+          "name": "Quorum Energy Logistics and Marketing",
+          "shared": false,
+          "products": [
+            {"name": "Quorum Liquids Pipeline", "legacy_names": ["eONE"]},
+            {"name": "Quorum Energy Marketing", "legacy_names": ["eONE"]}
+          ]
+        },
+        {
+          "name": "Quorum Hydrocarbon Management",
+          "shared": false,
+          "products": [
+            {"name": "Quorum Terminal & Plants", "legacy_names": ["Energy Components"]},
+            {"name": "Quorum Hydrocarbon Pipeline", "legacy_names": ["Energy Components"], "note": "Covers offshore and pipeline distribution"}
+          ]
+        },
+        {
+          "name": "Quorum Measurement",
+          "shared": true,
+          "products": [
+            {"name": "Quorum FLOWCAL", "legacy_names": ["FLOWCAL"]},
+            {"name": "Quorum Field Measurement", "legacy_names": ["TESTit", "PROVEit", "CALCit", "PYCit", "ANALYZEit"]}
+          ]
+        },
+        {
+          "name": "Quorum Land",
+          "shared": true,
+          "products": []
+        },
+        {
+          "name": "Quorum zdSCADA",
+          "shared": true,
+          "products": []
+        },
+        {
+          "name": "Quorum Supply Chain",
+          "shared": true,
+          "products": [
+            {"name": "Quorum Supply Chain Orchestration", "legacy_names": ["VOR"]},
+            {"name": "Quorum Personnel Logistics", "legacy_names": ["DaWinci"]},
+            {"name": "Quorum Cargo Logistics", "legacy_names": ["DaWinci"]}
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Energy Transition or Renewables",
+      "qnect_home": "Qnect Home",
+      "solutions": [
+        {
+          "name": "Quorum Hydrocarbon Management",
+          "shared": false,
+          "products": [
+            {"name": "Quorum Emissions", "legacy_names": [], "note": "Sub-SKU to Energy Components. Not a standalone product."},
+            {"name": "Quorum Terminal & Plants", "legacy_names": ["Energy Components"]}
+          ]
+        },
+        {
+          "name": "Quorum Land",
+          "shared": true,
+          "products": []
+        },
+        {
+          "name": "Quorum Supply Chain",
+          "shared": true,
+          "products": [
+            {"name": "Quorum Supply Chain Orchestration", "legacy_names": ["VOR"]},
+            {"name": "Quorum Personnel Logistics", "legacy_names": ["DaWinci"]},
+            {"name": "Quorum Cargo Logistics", "legacy_names": ["DaWinci"]}
+          ]
+        }
+      ]
+    }
+  ],
+  "shared_solutions": [
+    {"name": "Quorum Accounting", "markets": ["Upstream"], "note": "Highlighted as shared in the source slide but shown under Upstream only"},
+    {"name": "Quorum Field Operations", "markets": ["Upstream"], "note": "Highlighted as shared in the source slide but shown under Upstream only"},
+    {"name": "Quorum Measurement", "markets": ["Upstream", "Midstream"]},
+    {"name": "Quorum Land", "markets": ["Upstream", "Midstream", "Energy Transition or Renewables"]},
+    {"name": "Quorum zdSCADA", "markets": ["Upstream", "Midstream"]},
+    {"name": "Quorum Supply Chain", "markets": ["Upstream", "Midstream", "Energy Transition or Renewables"]}
+  ],
+  "ambiguous_legacy_names": {
+    "Energy Components": ["Quorum Terminal & Plants", "Quorum Hydrocarbon Pipeline", "Quorum Hydrocarbon Production Accounting", "Quorum Hydrocarbon Revenue Accounting"],
+    "Portfolio": ["Quorum Asset Portfolio Optimization", "Quorum Portfolio Optimization"],
+    "DaWinci": ["Quorum Personnel Logistics", "Quorum Cargo Logistics"],
+    "eONE": ["Quorum Liquids Pipeline", "Quorum Energy Marketing"]
+  }
+}
