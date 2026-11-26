@@ -1,0 +1,69 @@
+<!--
+  Log analysis comment template (ADO comments render HTML, not markdown).
+  Replace every <!--...--> placeholder. Delete a section only if it is genuinely empty AND
+  you have said so (e.g. "Ruled out: none - no prior hypotheses on the ticket").
+  Source tags: [Log] [ADO] [Customer] [SF] [Doc] [Inferred]
+-->
+<div>
+  <p><strong>Log analysis: <!--symptom--> (<!--server / service-->)</strong></p>
+  <p><em>AI-assisted analysis, advisory only - pending human review. Generated <!--date, time, TZ-->.
+     All times <!--CDT|CST--> unless stated. Logs were in <!--log timezone-->.</em></p>
+  <!-- Include the next line ONLY if the narrative may be stale when read; otherwise delete it. -->
+  <p><strong>Status as of {date/time TZ}:</strong> {current state if known; else "verify live state before acting"}</p>
+
+  <p><strong>Verdict:</strong> <!--one-line root cause--> &nbsp;|&nbsp;
+     <strong>Confidence:</strong> <!--High|Medium|Low--> (<!--why; what would raise it-->)</p>
+
+  <p><strong>Root cause</strong><br/>
+     <!--2-3 sentences: what is failing and why--></p>
+
+  <p><strong>Key evidence</strong></p>
+  <ul>
+    <li>Exact error [Log: <!--file name--> ]: <code><!--verbatim error text--></code></li>
+    <li>Pattern [Log]: <!--N occurrences = decomposition, e.g. "~33 cycles x 5 lines"; attempts; exit codes--></li>
+    <li>Not found [Log]: <!--no success line (e.g. "Started ..."), no other startup errors, etc.--></li>
+  </ul>
+
+  <p><strong>Environment</strong><br/>
+     <!--server, app path, port, OS, runtime, DB instance, customer, WI #--></p>
+
+  <p><strong>Trigger</strong><br/>
+     <!--the change that preceded the failure + how we know (source tag), or "No trigger identified"--></p>
+
+  <p><strong>Timeline (<!--CDT|CST-->)</strong></p>
+  <ul>
+    <li><!--time--> - <!--event--> [<!--source tag-->]</li>
+  </ul>
+
+  <p><strong>Why it happened</strong><br/>
+     <!--link between trigger and failure; mark any step that is [Inferred]--></p>
+
+  <p><strong>Ruled out</strong></p>
+  <ul>
+    <li><!--hypothesis--> - <!--evidence that excludes it--></li>
+  </ul>
+
+  <p><strong>Unrelated noise</strong></p>
+  <ul>
+    <li><!--item--> - <!--why unrelated; "likely" if unverified (and list under Open items)--></li>
+  </ul>
+
+  <p><strong>Precedents</strong></p>
+  <ul>
+    <li>WI #<!--id--> - <!--same case | reverse case | loosely similar--> - <!--what actually fixed it--></li>
+    <!-- none: "No resolved ADO precedent found." -->
+  </ul>
+
+  <p><strong>Open items / unknowns</strong></p>
+  <ul>
+    <li><!--anything unexplained or unverified--></li>
+  </ul>
+
+  <p><strong>Next steps (ordered)</strong></p>
+  <ol>
+    <li><!--action--> | <strong>Owner:</strong> <!--who--> | <strong>Risk / backup:</strong> <!--backup, approval-->
+        | <strong>Depends on:</strong> <!--previous step or none--></li>
+  </ol>
+  <p><strong>Verification:</strong> <!--exact log line, port, login, monitor--><br/>
+     <strong>Rollback / alternative:</strong> <!--what to do if the fix fails or is declined--></p>
+</div>
